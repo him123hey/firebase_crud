@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Data</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -16,8 +17,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body onload="process()">
+    <div class="row bg-success">
+      <h5 class="text-white p-3 ml-5">Persional Payment</h5>
+    </div>
     <div class="container mt-5" id="content">
-        <button type="button" class="btn btn-info float-right" data-toggle="modal" data-target="#insert">Open Modal</button>
+        <button style="display: flex; padding-top: 2px; padding-bottom: 0;" type="button" class="btn btn-info float-right" data-toggle="modal" data-target="#insert"><i class="material-icons mt-2">add_circle_outline</i> <p class="mt-2"><strong>Create</strong></p></button>
+        <br>
         <br>
         <hr>
         <table class="table table-bordered mt-2">
@@ -25,6 +30,8 @@
                 <tr>
                     <th>Title</th>
                     <th>Paid</th>
+                    <th>Date</th>
+                    <th>Comment</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -48,6 +55,12 @@
                 </div>
                 <div class="form-group">
                     <input type="number" id="paid" class="form-control mb-3" placeholder="Paid">
+                </div>
+                <div class="form-group">
+                    <input type="date" id="date" class="form-control mb-3">
+                </div>
+                <div class="form-group">
+                    <textarea id="comment" cols="60" rows="5" placeholder="Comment here......" class="p-2"></textarea>
                 </div>
                 <button class="btn btn-info" onclick="insert()" data-dismiss="modal">Submit</button>
             </form>
