@@ -6,7 +6,7 @@ function process() {
             result += `
                 <tr>
                     <td>${element.data().title}</td>
-                    <td>${element.data().paid}</td>
+                    <td>${element.data().paid} $</td>
                     <td>${element.data().date}</td>
                     <td>${element.data().comment}</td>
                     <td>
